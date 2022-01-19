@@ -100,12 +100,11 @@ class _HomePageState extends State<HomePage> {
       drawer: const NavigationDrawerWidget(),
       appBar: AppBar(
         elevation: 0,
-      
         iconTheme: IconThemeData(color: Colors.black),
         automaticallyImplyLeading: true,
         centerTitle: true,
         title: const Text(
-          'Trade Book',
+          'Trade',
           style: TextStyle(
               color: appcolor, fontWeight: FontWeight.bold, fontSize: 15),
         ),
@@ -143,7 +142,6 @@ class _HomePageState extends State<HomePage> {
       body: screens[index],
       resizeToAvoidBottomInset: false,
       bottomNavigationBar: NavigationBarTheme(
-        
         data: NavigationBarThemeData(
             indicatorColor: Colors.blue.shade100,
             labelTextStyle: MaterialStateProperty.all(
@@ -173,9 +171,7 @@ class _HomePageState extends State<HomePage> {
             ]),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      
       floatingActionButton: FloatingActionButton(
-        
         child: Image(
           image: AssetImage('assets/logo.png'),
           height: 35,
@@ -190,36 +186,34 @@ class _HomePageState extends State<HomePage> {
   }
 
   Widget buildSheet() => Padding(
-    padding: const EdgeInsets.symmetric(horizontal: 16),
-    child: Column(
+        padding: const EdgeInsets.symmetric(horizontal: 16),
+        child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            SizedBox(height: 10.h,),
+            SizedBox(
+              height: 10.h,
+            ),
             Row(
-              
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Text(
                   'My Portfolio',
-                  style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500),
+                  style:
+                      TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500),
                 ),
               ],
             ),
-            SizedBox(height: 25.h,),
+            SizedBox(
+              height: 25.h,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Invested Value'),
-                Text('\u{20B9}${53846.76}')
-              ],
+              children: [Text('Invested Value'), Text('\u{20B9}${53846.76}')],
             ),
             SizedBox(height: 32.h),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Current Value'),
-                Text('\u{20B9}${53846.76}')
-              ],
+              children: [Text('Current Value'), Text('\u{20B9}${53846.76}')],
             ),
             SizedBox(height: 32.h),
             Row(
@@ -227,11 +221,7 @@ class _HomePageState extends State<HomePage> {
               children: [
                 Text('Day P&L'),
                 Column(
-                  
-                  children: [
-                    Text('\u{20B9}${12364.76}'),
-                    Text('-5.78%')
-                  ],
+                  children: [Text('\u{20B9}${12364.76}'), Text('-5.78%')],
                 )
               ],
             ),
@@ -241,29 +231,25 @@ class _HomePageState extends State<HomePage> {
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Availabe Fund'),
-                Text('\u{20B9}${4546}')
-              ],
+              children: [Text('Availabe Fund'), Text('\u{20B9}${4546}')],
             ),
-            SizedBox(height: 34.h,),
-             SizedBox(
-                  width: double.infinity,
-                  child: TextButton(
-                      onPressed: () {
-                        
-                      },
-                      style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all(Colors.white),
-                          foregroundColor:
-                              MaterialStateProperty.all(appcolor),
-                          padding: MaterialStateProperty.all(
-                              EdgeInsets.symmetric(vertical: 12.h)),
-                          textStyle: MaterialStateProperty.all(TextStyle(
-                              fontSize: 14.sp, fontWeight: FontWeight.w400))),
-                      child: const Text('View Portfolio')),
-                ),
+            SizedBox(
+              height: 34.h,
+            ),
+            SizedBox(
+              width: double.infinity,
+              child: TextButton(
+                  onPressed: () {},
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.white),
+                      foregroundColor: MaterialStateProperty.all(appcolor),
+                      padding: MaterialStateProperty.all(
+                          EdgeInsets.symmetric(vertical: 12.h)),
+                      textStyle: MaterialStateProperty.all(TextStyle(
+                          fontSize: 14.sp, fontWeight: FontWeight.w400))),
+                  child: const Text('View Portfolio')),
+            ),
           ],
         ),
-  );
+      );
 }
